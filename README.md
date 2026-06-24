@@ -1,4 +1,4 @@
-# 🛒 Amazon Store – AI Support Agent
+# AgentX
 
 An AI-powered customer support agent that answers questions about orders and products using data from `Amazon.csv` (100,000 real orders, 50 products) **and live Amazon product data via RapidAPI**. Built as part of an Agentic AI Assignment.
 
