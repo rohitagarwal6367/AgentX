@@ -4,17 +4,6 @@ An AI-powered customer support agent that answers questions about orders and pro
 
 ---
 
-## 📋 What It Does
-
-| You Ask | Agent Does |
-|--------|-----------|
-| "Where is order ORD0000001?" | Looks up the order and shows status, ETA, customer info |
-| "Is there a cheaper alternative for ORD0000002?" | Chains 3 tool calls to find cheaper products in same category |
-| "Tell me about product P00014" | Fetches full product details |
-| "Show me wireless earbuds" | Searches the product catalogue by keyword |
-| "What is the status of ORD9999999?" | Returns a friendly "not found" message |
-
----
 
 ## ⚙️ Requirements
 
@@ -127,3 +116,12 @@ USE_LIVE_API = False
 
 ---
 
+## 📞 Contact
+
+If you have any queries, suggestions, or issues regarding this project, feel free to reach out:
+
+* 📧 Email: **[rohitagarwal.se@gmail.com](mailto:agrwalrohit7877@gmail.com)**
+* 🌐 GitHub: [Follow Me](https://github.com/rohitagarwal6367)
+* 🔗 LinkedIn: [Connect With Me](https://www.linkedin.com/in/rohit-agarwal6367/)
+
+---
