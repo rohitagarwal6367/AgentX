@@ -98,12 +98,6 @@ You can also click the **quick example chips** at the top of the page to auto-fi
 - **Product searches** try the live API first, then fall back to local data if the API is unavailable
 - Results show a 🌐 *Live from Amazon* badge when using real-time data
 
-### To disable live API (use only local CSV):
-Open `tools.py` and set:
-```python
-USE_LIVE_API = False
-```
-
 ---
 
 ## 🔧 Available Tools (used internally by the agent)
