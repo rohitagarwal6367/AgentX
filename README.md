@@ -1,6 +1,6 @@
 # AgentX
 
-An AI-powered customer support agent that answers questions about orders and products using data from `Amazon.csv` (100,000 real orders, 50 products) **and live Amazon product data via RapidAPI**. Built as part of an Agentic AI Assignment.
+An AI-powered customer support agent that answers questions about orders and products using data from `Amazon.csv` (100,000 real orders, 50 products) **and live Amazon product data via RapidAPI**. Built as part of an Agentic AI.
 
 ---
 
@@ -102,16 +102,7 @@ You can also click the **quick example chips** at the top of the page to auto-fi
 
 ---
 
-## 🌐 Live Amazon API (RapidAPI)
 
-The agent can search **real, live Amazon products** using the RapidAPI "Real-time Amazon Data" API.
-
-### How to activate live search:
-
-1. Go to **[RapidAPI → Real-time Amazon Data](https://rapidapi.com/letscrape-6bRBa3Q3OId/api/real-time-amazon-data)**
-2. Click **"Subscribe to Test"** and choose the **FREE** plan
-3. Your API key (`abdfb37748...`) is already configured in `tools.py`
-4. That’s it! Product searches will now return live Amazon results 🎉
 
 ### How it works:
 - **Orders** always come from `Amazon.csv` (your CSV data is preserved)
@@ -136,52 +127,3 @@ USE_LIVE_API = False
 
 ---
 
-## 🧪 Run Without the Web UI (Terminal Only)
-
-```bash
-python agent.py
-```
-
-This runs a quick demo of 6 questions directly in the terminal.
-
----
-
-## 🧪 Run Unit Tests
-
-```bash
-python -m pytest test_agent.py -v
-```
-
----
-
-## 📊 Dataset (Amazon.csv)
-
-| Field | Details |
-|-------|---------|
-| Orders | 100,000 rows (ORD0000001 – ORD0100000) |
-| Products | 50 unique products (P00001 – P00050) |
-| Categories | Electronics, Books, Clothing, Toys & Games, Sports & Outdoors, Home & Kitchen |
-| Order statuses | Delivered, Shipped, Pending, Returned, Cancelled |
-
----
-
-## ❓ Troubleshooting
-
-| Problem | Fix |
-|---------|-----|
-| `ModuleNotFoundError: streamlit` | Run `pip install streamlit` |
-| `ModuleNotFoundError: pandas` | Run `pip install pandas` |
-| `ModuleNotFoundError: requests` | Run `pip install requests` |
-| `FileNotFoundError: Amazon.csv` | Make sure `Amazon.csv` is in the same folder as `app.py` |
-| Port 8501 already in use | Run `python -m streamlit run app.py --server.port 8502` |
-| App loads slowly on first run | Normal – pandas is loading all 100,000 rows from CSV |
-| Live search returns local results | Subscribe to the free plan at [RapidAPI](https://rapidapi.com/letscrape-6bRBa3Q3OId/api/real-time-amazon-data) |
-
----
-
-## 🏆 Assignment Details
-
-- **Level:** Fresher / Final Year Students  
-- **Tools:** `get_order`, `search_products`, `get_product`  
-- **Bonus:** Streamlit web UI · Tool call logging · LLM polish hook  
-- **Data:** Amazon.csv (100k real orders)
