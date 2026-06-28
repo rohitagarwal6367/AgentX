@@ -59,17 +59,37 @@ _prod_agg = (
     .reset_index()
 )
 
+_CORRECT_CATEGORIES = {
+    "P00001": "electronics", "P00002": "electronics", "P00003": "electronics",
+    "P00004": "electronics", "P00005": "electronics", "P00006": "electronics",
+    "P00007": "electronics", "P00008": "electronics", "P00009": "electronics",
+    "P00010": "electronics", "P00011": "sports & outdoors", "P00012": "electronics",
+    "P00013": "electronics", "P00014": "toys & games", "P00015": "home & kitchen",
+    "P00016": "home & kitchen", "P00017": "home & kitchen", "P00018": "home & kitchen",
+    "P00019": "home & kitchen", "P00020": "home & kitchen", "P00021": "sports & outdoors",
+    "P00022": "sports & outdoors", "P00023": "home & kitchen", "P00024": "sports & outdoors",
+    "P00025": "clothing", "P00026": "clothing", "P00027": "clothing", "P00028": "clothing",
+    "P00029": "clothing", "P00030": "clothing", "P00031": "toys & games", "P00032": "toys & games",
+    "P00033": "toys & games", "P00034": "home & kitchen", "P00035": "home & kitchen",
+    "P00036": "home & kitchen", "P00037": "electronics", "P00038": "electronics",
+    "P00039": "electronics", "P00040": "electronics", "P00041": "electronics",
+    "P00042": "electronics", "P00043": "electronics", "P00044": "electronics",
+    "P00045": "electronics", "P00046": "electronics", "P00047": "electronics",
+    "P00048": "electronics", "P00049": "books", "P00050": "books"
+}
+
 PRODUCTS: dict = {}
 for _, row in _prod_agg.iterrows():
     pid = str(row["ProductID"]).strip()
+    cat = _CORRECT_CATEGORIES.get(pid, str(row["Category"]).strip().lower())
     PRODUCTS[pid] = {
         "product_id": pid,
         "name": str(row["ProductName"]).strip(),
-        "category": str(row["Category"]).strip().lower(),
+        "category": cat,
         "brand": str(row["Brand"]).strip(),
         "price": round(float(row["UnitPrice"]), 2),
         "description": (
-            f"{row['Brand']} brand product in the '{row['Category']}' category. "
+            f"{row['Brand']} brand product in the '{cat.title()}' category. "
             "Available on Amazon India."
         ),
     }

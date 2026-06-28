@@ -22,8 +22,7 @@ from tools import USE_LIVE_API, RAPIDAPI_KEY, RAPIDAPI_HOST
 # Page config (must be first Streamlit call)
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Amazon Support Agent – AI Assistant",
-    page_icon="🛒",
+    page_title="AgentX - AI Assistant",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -320,7 +319,7 @@ st.markdown(
     """
     <div class="hero-banner">
         <h1>✦ Agentic AI</h1>
-        <p>Amazon Store Support Agent &nbsp;·&nbsp; AI-powered order &amp; product intelligence</p>
+        <p>AgentX &nbsp;·&nbsp; AI-powered order &amp; product intelligence</p>
     </div>
     """,
     unsafe_allow_html=True,

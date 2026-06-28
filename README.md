@@ -97,7 +97,7 @@ You can also click the **quick example chips** at the top of the page to auto-fi
 ├── app.py              ← Streamlit web UI
 ├── test_agent.py       ← Unit tests
 ├── README.md           ← This file
-└── DESIGN.md           ← Design decisions document
+
 ```
 
 ---
